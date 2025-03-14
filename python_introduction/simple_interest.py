@@ -1,7 +1,10 @@
-principal = P = 1000
-rate = R = 0.05
-time = T = 3
+# Define variables
+principal = 1000
+rate = 0.05
+time = 3   
 
-I = float(P * R * T)
+# Calculate simple interest
+interest = principal * rate * time
 
-print("The simple interest is: ", I)
+# Print the result
+print(f"The simple interest is: {interest}")
