@@ -14,7 +14,7 @@ match priority:
     case _:
         message = "Invalid priority level. Please enter high, medium, or low."
 
-if priority in ["high", "medium", "low"] and time_bound == "yes":
+if time_bound == "yes":
     message += " that requires immediate attention today!"
 
 print("Reminder:", message)
