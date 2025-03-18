@@ -1,4 +1,3 @@
-# pattern_drawing.py
 
 size = int(input("Enter the size of the pattern: "))
 
