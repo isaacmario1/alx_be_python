@@ -14,21 +14,21 @@ def convert_to_fahrenheit(celsius):
     fahrenheit = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
     return fahrenheit
 
-# Function for user interaction and temperature conversion
+#user interaction and temperature conversion
 def temperature_conversion():
     temp_input = input("Enter the temperature to convert: ")
-    
-    # Check if the input is a valid number
-    if temp_input.replace('.', '', 1).isdigit() or (temp_input[1:].replace('.', '', 1).isdigit() and temp_input[0] == '-'):
+
+    try:
+        # Check if the input is a valid number
         temp = float(temp_input)
-    else:
+    except ValueError:
+        # Handle case where the input is not a valid number
         print("Invalid temperature. Please enter a numeric value.")
         return
 
-    # Ask whether the temperature is in Celsius or Fahrenheit
+    #if temperature is in Celsius or Fahrenheit
     unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
-    
-    # Validate the unit input
+
     if unit == "C":
         # Convert to Fahrenheit
         converted_temp = convert_to_fahrenheit(temp)
